@@ -1,7 +1,8 @@
 class Api::V1::MessagesController < ApplicationController
   before_action :set_channel
+
   def index
-    messages = Message.order(created_at: :desc)
+    messages = @channel.messages.order('created_at ASC')
     render json: messages
   end
 
@@ -11,6 +12,7 @@ class Api::V1::MessagesController < ApplicationController
   private
 
   def set_channel
-    @channel = Channel.find_by_name(params[:name])
+    @channel = Channel.find_by(name: params[:channel_id])
   end
 end
+
