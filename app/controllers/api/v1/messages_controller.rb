@@ -1,4 +1,5 @@
 class Api::V1::MessagesController < ApplicationController
+# class Api::V1::MessagesController < ActionController::Base
   before_action :set_channel
 
   def index
