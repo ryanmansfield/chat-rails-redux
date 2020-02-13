@@ -13,7 +13,7 @@ Channel.destroy_all
 puts "All Messages, Users, and Channels have been destroyed, Creating Channels"
 
 user_names = ['Jack', 'Jill']
-channel_names = ['USA', 'React', 'General']
+channel_names = ['USA', 'react', 'general']
 
 
 
@@ -35,3 +35,8 @@ puts "Users Seeded, Creating Messages"
 end
 
 puts "DATABASE SEEDED"
+
+puts 'Channels:'
+channels.each do |channel|
+  puts "- #{channel.id}: #{channel.name}"
+end

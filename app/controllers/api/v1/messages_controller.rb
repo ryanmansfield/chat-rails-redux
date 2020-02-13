@@ -1,8 +1,8 @@
 class Api::V1::MessagesController < ApplicationController
-# class Api::V1::MessagesController < ActionController::Base
   before_action :set_channel
 
   def index
+    binding.pry
     messages = @channel.messages.order('created_at ASC')
     render json: messages
   end
