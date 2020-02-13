@@ -21,7 +21,7 @@ const Message = (props) => {
 
         <small>{time}</small>
       </i>
-      <p>{emojify(content)}</p>
+      <p>{content}</p>
     </div>
   );
 };
