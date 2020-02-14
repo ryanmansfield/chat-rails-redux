@@ -18,7 +18,7 @@ const Message = (props) => {
   return (
     <div className="message-container">
       <i className="author">
-
+        <span>{props.author}</span>
         <small>{time}</small>
       </i>
       <p>{content}</p>
